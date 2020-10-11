@@ -1,0 +1,143 @@
+
+.html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'ChelseaRetro', sans-serif;
+}
+
+.row {
+    background: rgb(139,113,79);
+    background: linear-gradient(90deg, rgb(87, 70, 49) 5%, rgb(106,75,36,1) 25%, rgb(100, 70, 36) 51%, rgba(59,39,22,1) 76%, rgba(25,17,9,1) 96%);
+    color: #e8e2dc;;
+}
+
+.visible-navbar {
+    left: 0;
+    box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+    -moz-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+    -webkit-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+    overflow-y: auto;
+}
+
+.move-main {
+    margin-left: 200px;
+}
+/* Навигация */
+.nav-link {
+    color: #e8e2dc !important;
+    text-transform: uppercase;
+    padding: .5rem 0;
+}
+.navbar a{
+text-align: center;
+}
+.navbar img {
+    margin-left: 25px;
+}
+
+.nav-link::before{
+    transition: all .10s;
+    opacity: 0;
+    margin-left: -.5em;
+    content: '\f0c4';
+    font-family: 'FontAwesome';
+    display: inline-block;
+}
+
+.nav-link:hover::before{
+    opacity: 1;
+    margin-left: .2em;
+    transform: rotate(-50deg);
+    margin-right: 3px;
+}
+.logo {
+    display: block;
+    margin-top: 200px;
+}
+.navbar {
+    display: block;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    background-color: #332112;
+    padding: .5rem 0;
+    z-index: 1000;
+}
+ 
+/* Главная страница*/
+.main {
+
+}
+.main h1 {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+@media (max-width: 576px) {
+    .sticky {
+        position: fixed;
+        top: 0;
+        left: -1000px;
+       
+    }
+    .visible-navbar {
+        left: 0;
+        box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+        -moz-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+        -webkit-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+        overflow-y: auto;
+    }
+ }
+@media (min-width: 576px) {
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 200px;
+        left: -1000px;
+    }
+    .visible-navbar {
+        left: 0;
+        box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+        -moz-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+        -webkit-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+        overflow-y: auto;
+    }
+}
+
+@media (min-width: 768px) { 
+    #toggler {
+        display: none;
+    }
+    .sticky {
+        position: fixed;
+        top: 0;
+        left: 0px;
+        width: 100%;
+    }
+    .nav-link {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 992px) { 
+    .nav-link {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .nav-link {
+        font-size: 1.5rem;
+    }
+ }
+
+@font-face {
+    font-family: "ChelseaRetro";
+    src: url("fonts/ChelseaRetro.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
