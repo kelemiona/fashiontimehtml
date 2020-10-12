@@ -25,39 +25,52 @@
     margin-left: 200px;
 }
 /* Навигация */
+.nav {
+    width: 80%;
+}
 .nav-link {
+    display: block;
+    width: 100%;
     color: #e8e2dc !important;
     text-transform: uppercase;
     padding: .5rem 0;
 }
-.navbar a{
-text-align: center;
+.nav-item {
+    display: block;
+    position: relative;
 }
-.navbar img {
-    margin-left: 25px;
+.nav-item+.nav-item::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    top: 0;
+    background: rgba(0,0,0,.4);
+    box-shadow: 0 1px 0 0 rgba(255,255,255,.4);
 }
 
-.nav-link::before{
+.navbar img {
+    margin-left: .5em;
+}
+.nav-link::after{
+    
     transition: all .10s;
     opacity: 0;
-    margin-left: -.5em;
     content: '\f0c4';
     font-family: 'FontAwesome';
-    display: inline-block;
 }
 
-.nav-link:hover::before{
-    opacity: 1;
-    margin-left: .2em;
+.nav-link:hover::after{
     transform: rotate(-50deg);
-    margin-right: 3px;
-}
+    opacity: 1;
+    margin-left:2px; 
+} 
 .logo {
     display: block;
     margin-top: 200px;
 }
 .navbar {
-    display: block;
+    /* display: block; */
     position: fixed;
     top: 0;
     height: 100vh;
@@ -65,7 +78,67 @@ text-align: center;
     padding: .5rem 0;
     z-index: 1000;
 }
- 
+.social {
+    font-size: 1.5rem;
+}
+.insta span{
+    display: inline-block;
+}
+.insta a {
+    color: #e8e2dc;
+    text-decoration: none;
+}
+.fa-instagram {
+    color: #e8e2dc;
+    display: inline-block;
+}
+
+.phonenumber span {
+    display: inline-block; 
+}
+.fa-phone {
+    color: #e8e2dc;
+    display: inline-block;
+}
+
+.phonenumber:hover > span i  {
+    animation: 1200ms ease 0s normal none 1 running shake;
+}
+@keyframes shake {
+0% {
+    transform: rotateZ(0deg);
+}
+10% {
+    transform: rotateZ(-30deg);
+}
+20% {
+    transform: rotateZ(15deg);
+}
+30% {
+    transform: rotateZ(-10deg);
+}
+40% {
+    transform: rotateZ(7.5deg);
+}
+50% {
+    transform: rotateZ(-6deg);
+}
+60% {
+    transform: rotateZ(5deg);
+}
+70% {
+    transform: rotateZ(-4.28571deg);
+}
+80% {
+    transform: rotateZ(3.75deg);
+}
+90% {
+    transform: rotateZ(-3.33333deg);
+}
+100% {
+    transform: rotateZ(0deg);
+}
+}
 /* Главная страница*/
 .main {
 
@@ -78,11 +151,14 @@ text-align: center;
 
 
 @media (max-width: 576px) {
+    .navbar {
+        width: 100vw;
+    }
     .sticky {
         position: fixed;
         top: 0;
+        
         left: -1000px;
-       
     }
     .visible-navbar {
         left: 0;
@@ -93,10 +169,12 @@ text-align: center;
     }
  }
 @media (min-width: 576px) {
+    .navbar {
+        width: 25vw;
+    }
     .sticky {
         position: fixed;
         top: 0;
-        width: 200px;
         left: -1000px;
     }
     .visible-navbar {
@@ -106,9 +184,13 @@ text-align: center;
         -webkit-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
         overflow-y: auto;
     }
+    .move-main {
+        margin-left: 25vw;
+    }
 }
 
 @media (min-width: 768px) { 
+
     #toggler {
         display: none;
     }
@@ -120,6 +202,9 @@ text-align: center;
     }
     .nav-link {
         font-size: 1.1rem;
+    }
+    .social {
+        font-size: 1rem;
     }
 }
 
