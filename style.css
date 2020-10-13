@@ -1,44 +1,47 @@
-
 .html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
     font-family: 'ChelseaRetro', sans-serif;
-}
-
-.row {
     background: rgb(139,113,79);
     background: linear-gradient(90deg, rgb(87, 70, 49) 5%, rgb(106,75,36,1) 25%, rgb(100, 70, 36) 51%, rgba(59,39,22,1) 76%, rgba(25,17,9,1) 96%);
     color: #e8e2dc;;
 }
-
-.visible-navbar {
-    left: 0;
-    box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
-    -moz-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
-    -webkit-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
-    overflow-y: auto;
-}
-
-.move-main {
-    margin-left: 200px;
-}
+/**************/
 /* Навигация */
+/**************/
+.navbar {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    background-color: #332112;
+    padding: .5rem 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: block;
+    margin-top: 200px;
+}
+
+.navbar img {
+    margin-left: .5em;
+}
+
+/*Блоки меню*/
+
 .nav {
     width: 80%;
 }
-.nav-link {
-    display: block;
-    width: 100%;
-    color: #e8e2dc !important;
-    text-transform: uppercase;
-    padding: .5rem 0;
-}
+
 .nav-item {
     display: block;
     position: relative;
 }
+
 .nav-item+.nav-item::before {
     content: "";
     position: absolute;
@@ -49,11 +52,15 @@
     box-shadow: 0 1px 0 0 rgba(255,255,255,.4);
 }
 
-.navbar img {
-    margin-left: .5em;
+.nav-link {
+    display: block;
+    width: 100%;
+    color: #e8e2dc !important;
+    text-transform: uppercase;
+    padding: .5rem 0;
 }
+
 .nav-link::after{
-    
     transition: all .10s;
     opacity: 0;
     content: '\f0c4';
@@ -65,40 +72,15 @@
     opacity: 1;
     margin-left:2px; 
 } 
-.logo {
-    display: block;
-    margin-top: 200px;
-}
-.navbar {
-    /* display: block; */
-    position: fixed;
-    top: 0;
-    height: 100vh;
-    background-color: #332112;
-    padding: .5rem 0;
-    z-index: 1000;
-}
+/*Ссылки и контакты*/
 .social {
     font-size: 1.5rem;
-}
-.insta span{
-    display: inline-block;
-}
-.insta a {
     color: #e8e2dc;
     text-decoration: none;
 }
-.fa-instagram {
-    color: #e8e2dc;
-    display: inline-block;
-}
 
-.phonenumber span {
-    display: inline-block; 
-}
-.fa-phone {
+.insta a {
     color: #e8e2dc;
-    display: inline-block;
 }
 
 .phonenumber:hover > span i  {
@@ -139,6 +121,15 @@
     transform: rotateZ(0deg);
 }
 }
+
+/*Выезд навбара для средних устройств*/
+
+
+/*cмещение главного блока*/
+.move-main {
+    margin-left: 200px;
+}
+
 /* Главная страница*/
 .main {
 
@@ -157,7 +148,6 @@
     .sticky {
         position: fixed;
         top: 0;
-        
         left: -1000px;
     }
     .visible-navbar {
@@ -170,7 +160,7 @@
  }
 @media (min-width: 576px) {
     .navbar {
-        width: 25vw;
+        width: 25%;
     }
     .sticky {
         position: fixed;
@@ -185,7 +175,7 @@
         overflow-y: auto;
     }
     .move-main {
-        margin-left: 25vw;
+        margin-left: 25%;
     }
 }
 
@@ -193,7 +183,7 @@
 
     #toggler {
         display: none;
-    }
+    } 
     .sticky {
         position: fixed;
         top: 0;
