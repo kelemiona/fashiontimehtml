@@ -78,7 +78,9 @@
     color: #e8e2dc;
     text-decoration: none;
 }
-
+.fa-phone, .fa-instagram {
+    margin-right: 5px;
+}
 .insta a {
     color: #e8e2dc;
 }
@@ -177,6 +179,10 @@
     .move-main {
         margin-left: 25%;
     }
+    .social {
+        font-size: 1.15rem;
+        margin-bottom: 30px;
+    }
 }
 
 @media (min-width: 768px) { 
@@ -194,7 +200,8 @@
         font-size: 1.1rem;
     }
     .social {
-        font-size: 1rem;
+        font-size: 1em;
+        margin-bottom: 15px;
     }
 }
 
@@ -202,11 +209,19 @@
     .nav-link {
         font-size: 1.3rem;
     }
+    .social {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
 }
 
 @media (min-width: 1200px) {
     .nav-link {
         font-size: 1.5rem;
+    }
+    .social {
+        font-size: 1.55rem;
+        margin-bottom: 30px;
     }
  }
 
