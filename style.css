@@ -186,7 +186,9 @@
 }
 
 @media (min-width: 768px) { 
-
+    .navbar {
+        min-height: 630px;
+    }
     #toggler {
         display: none;
     } 
@@ -206,6 +208,7 @@
 }
 
 @media (min-width: 992px) { 
+
     .nav-link {
         font-size: 1.3rem;
     }
@@ -216,6 +219,7 @@
 }
 
 @media (min-width: 1200px) {
+
     .nav-link {
         font-size: 1.5rem;
     }
