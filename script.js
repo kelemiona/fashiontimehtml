@@ -11,8 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
   
     toggle.addEventListener('click', ()=> {
         console.log(link);
+        toggle.classList.toggle('active');
         navbar.classList.toggle('visible-navbar');
         main.classList.toggle('move-main');
+        toggle.classList.toggle('sticky-burger');
     });
     
 
@@ -22,8 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         if (window.pageYOffset >= sticky) {
             navbar.classList.add("sticky");
-            console.log('scroll');
+            if (width < 768 && width > 576 && toggle.classList.contains('active')) {
+                toggle.classList.add("sticky-burger");
+            }
             } 
+        
     });
 
     if (width < 768) {
