@@ -257,15 +257,31 @@ body {
     margin-top: -4px
 }
 
+/*Закрепление шапки сверху*/
+.sticky-main {
+    height: 100vh;
+    overflow-y: auto;
+}
+.sticky-head-main {
+    border-bottom: thin solid #e8e2dc;
+    box-shadow: 0 1px 5px #e8e2dc;
+}
+
 @media (max-width: 576px) {
     .navbar {
         width: 100vw;
     }
 
+    .headcontent {
+        background-image: url('img/fon.jpg');
+    }
     .sticky {
         position: fixed;
         top: 0;
         left: -1000px;
+    }
+    .sticky-burger {
+         z-index: 1001 !important;
     }
 
     .visible-navbar {
@@ -294,7 +310,7 @@ body {
 
     .sticky-burger {
         position: fixed;
-        top: 4%;
+        top: 15px;
         left: 19%;
         z-index: 1001 !important;
     }
@@ -333,7 +349,7 @@ body {
     }
 
     #toggler {
-        display: none;
+        opacity: 0;
     }
 
     .sticky {
