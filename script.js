@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const main = document.querySelector('.main');
     const link = document.querySelector('.nav');
     const width = document.documentElement.clientWidth;
-    
+    const mainHead = document.querySelector('.headcontent');
   
     toggle.addEventListener('click', ()=> {
         console.log(link);
@@ -36,14 +36,27 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', () => {
             navbar.classList.remove('visible-navbar');
             main.classList.remove('move-main');
+            toggle.classList.remove('active');
         });
     };
+
+    if (width < 576) {
+        mainHead.classList.add('flex-row-reverse');
+        mainHead.classList.add('sticky-top');
+        mainHead.classList.add('sticky-head-main');
+        main.classList.add('sticky-main');
+
+    } else {
+        mainHead.classList.remove('flex-row-reverse');
+        mainHead.classList.remove('sticky-top');
+        mainHead.classList.remove('sticky-head-main');
+        main.classList.remove('sticky-main');
+    }
 
  
 })
 
 // window.onscroll = function() {myFunction()};
-
 // let navbar = document.getElementById("navbar");
 // let sticky = navbar.offsetTop;
 // let toggle = document.getElementById("toggler");
