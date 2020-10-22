@@ -43,16 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (width < 576) {
         mainHead.classList.add('flex-row-reverse');
         mainHead.classList.add('sticky-top');
-        mainHead.classList.add('sticky-head-main');
-        main.classList.add('sticky-main');
-
-    } else {
-        mainHead.classList.remove('flex-row-reverse');
-        mainHead.classList.remove('sticky-top');
-        mainHead.classList.remove('sticky-head-main');
-        main.classList.remove('sticky-main');
-    }
-
+    }   
  
 })
 

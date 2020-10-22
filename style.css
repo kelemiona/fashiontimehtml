@@ -258,16 +258,7 @@ body {
 }
 
 /*Закрепление шапки сверху*/
-.sticky-main {
-    height: 100vh;
-    overflow-y: auto;
-}
-.sticky-head-main {
-    border-bottom: thin solid #e8e2dc;
-    box-shadow: 0 1px 5px #e8e2dc;
-}
-
-@media (max-width: 576px) {
+@media (max-width: 575px) {
     .navbar {
         width: 100vw;
     }
@@ -295,6 +286,16 @@ body {
     .move-main {
         margin-left: 0;
     }
+
+    .sticky-head-main {
+        border-bottom: thin solid #e8e2dc;
+        box-shadow: -5px 1px 5px #e8e2dc;
+    }
+    .sticky-main {
+        height: 100vh;
+        overflow-y: auto;
+    }
+    
 }
 
 @media (min-width: 576px) {
