@@ -257,15 +257,12 @@ body {
     margin-top: -4px
 }
 
-/*Закрепление шапки сверху*/
+
 @media (max-width: 575px) {
     .navbar {
         width: 100vw;
     }
 
-    .headcontent {
-        background-image: url('img/fon.jpg');
-    }
     .sticky {
         position: fixed;
         top: 0;
@@ -287,9 +284,19 @@ body {
         margin-left: 0;
     }
 
-    .sticky-head-main {
+    .head-sm {
+        background-image: url('img/fon.jpg');
         border-bottom: thin solid #e8e2dc;
         box-shadow: -5px 1px 5px #e8e2dc;
+        -ms-flex-direction: row-reverse!important;
+        flex-direction: row-reverse!important;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1020;
+    }
+    .head-sm h1 {
+        font-size: 2.3rem;
     }
     .sticky-main {
         height: 100vh;
