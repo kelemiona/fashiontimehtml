@@ -261,8 +261,19 @@ body {
 @media (max-width: 575px) {
     .navbar {
         width: 100vw;
+        height: 320px;
+        min-height: 150px;
+        margin-top: 45px;
+        font-size: 25px;
     }
 
+    .logo{
+        display: none;
+    }
+
+    .nav-item {
+        border-bottom: 1px solid #e8e2dc;
+    }
     .sticky {
         position: fixed;
         top: 0;
